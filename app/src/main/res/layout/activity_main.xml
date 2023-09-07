@@ -63,12 +63,14 @@
         android:textAlignment="center">
 
         <EditText
-            android:id="@+id/segundoval"
+            android:id="@+id/segundoVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:onClick="multiplicar"
+            android:textAlignment="center"
             tools:text="Ingrese otro numero" />
     </LinearLayout>
 
@@ -78,27 +80,91 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_sumar"
+            android:id="@+id/btnSumar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="0dp"
-            android:text="Button"
+            android:onClick="sumar"
+            android:text="+"
             android:textAlignment="center"
             android:textSize="20sp"
             app:cornerRadius="10dp"
             tools:text="+" />
 
         <Button
-            android:id="@+id/btn_restar"
+            android:id="@+id/btnRestar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="0dp"
-            android:text="Button"
+            android:onClick="restar"
+            android:text="-"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:cornerRadius="10dp"
             tools:text="-" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:onClick="dividir"
+            android:text="/"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:onClick="resetear"
+            android:text="Resetear" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:hint="Resultado"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>
